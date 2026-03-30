@@ -6,9 +6,37 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 
 ## Available Skills
 
+### Writing & Copy
+
 | Skill | Command | What it does |
 |-------|---------|-------------|
-| [Ogilvy Copywriting](ogilvy/) | `/ogilvy` | David Ogilvy's advertising principles — positioning, headlines, promises, brand voice, long-form copy. For copy that sells. |
+| [Ogilvy Copywriting](ogilvy/) | `/ogilvy` | David Ogilvy's advertising principles — positioning, headlines, promises, brand voice. |
+| [Copywriting](copywriting/) | `/copywriting` | Write marketing copy that is clear, compelling, and drives action. |
+| [Copy Editing](copy-editing/) | `/copy-editing` | Systematically improve existing copy through focused editing passes. |
+| [Stop Slop](stop-slop/) | `/stop-slop` | Remove AI writing patterns from prose. |
+
+### Design & Frontend
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Frontend Design](frontend-design/) | `/frontend-design` | Create distinctive, production-grade frontend interfaces. |
+| [Make Interfaces Feel Better](make-interfaces-feel-better/) | `/make-interfaces-feel-better` | Design engineering principles for polished interfaces. |
+| [Emil Design Eng](emil-design-eng/) | `/emil-design-eng` | Emil Kowalski's philosophy on UI polish and component design. |
+| [Web Design Guidelines](web-design-guidelines/) | `/web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. |
+| [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
+| [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
+
+### SEO & Marketing
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [SEO Audit](seo-audit/) | `/seo-audit` | Identify SEO issues and provide actionable recommendations. |
+| [Schema Markup](schema-markup/) | `/schema-markup` | Implement schema.org markup for rich search results. |
+| [Programmatic SEO](programmatic-seo/) | `/programmatic-seo` | Build SEO-optimized pages at scale using templates and data. |
+| [Content Strategy](content-strategy/) | `/content-strategy` | Plan content that drives traffic, builds authority, and generates leads. |
+| [Competitor Alternatives](competitor-alternatives/) | `/competitor-alternatives` | Create competitor comparison pages for SEO and sales enablement. |
+| [Page CRO](page-cro/) | `/page-cro` | Analyze marketing pages and improve conversion rates. |
+| [Analytics Tracking](analytics-tracking/) | `/analytics-tracking` | Set up tracking that provides actionable insights. |
 
 ## Install
 
@@ -21,9 +49,10 @@ curl -o ~/.claude/skills/ogilvy/SKILL.md \
   https://raw.githubusercontent.com/boraoztunc/skills/main/ogilvy/SKILL.md
 ```
 
-Or clone the whole repo and symlink what you need:
+Some skills have extra reference files. To get everything:
 
 ```bash
+# Clone the repo and symlink what you need
 git clone https://github.com/boraoztunc/skills.git
 ln -s $(pwd)/skills/ogilvy ~/.claude/skills/ogilvy
 ```
