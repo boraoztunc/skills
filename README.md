@@ -38,6 +38,28 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [Page CRO](page-cro/) | `/page-cro` | Analyze marketing pages and improve conversion rates. |
 | [Analytics Tracking](analytics-tracking/) | `/analytics-tracking` | Set up tracking that provides actionable insights. |
 
+### Video — HyperFrames
+
+Skills for [HyperFrames](https://github.com/heygen-com/hyperframes) by HeyGen — write HTML, render video. Vendored from `heygen-com/hyperframes` under Apache-2.0 (see [`LICENSE-hyperframes`](LICENSE-hyperframes/)).
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [HyperFrames](hyperframes/) | `/hyperframes` | Author HTML video compositions, timelines, captions, voiceovers, transitions. |
+| [HyperFrames CLI](hyperframes-cli/) | `/hyperframes-cli` | Dev loop: init, lint, inspect, preview, render, doctor. |
+| [HyperFrames Media](hyperframes-media/) | `/hyperframes-media` | Asset preprocessing — TTS, transcription, background removal. |
+| [HyperFrames Registry](hyperframes-registry/) | `/hyperframes-registry` | Install registry blocks and components into compositions. |
+| [Website to HyperFrames](website-to-hyperframes/) | `/website-to-hyperframes` | Capture a website and turn it into a video composition. |
+| [Remotion to HyperFrames](remotion-to-hyperframes/) | `/remotion-to-hyperframes` | Port an existing Remotion project to HyperFrames. |
+| [Contribute Catalog](contribute-catalog/) | `/contribute-catalog` | Author and submit a new HyperFrames registry block or component. |
+| [GSAP](gsap/) | `/gsap` | GSAP timelines, easing, stagger inside HyperFrames. |
+| [Anime.js](animejs/) | `/animejs` | Anime.js adapter patterns for HyperFrames. |
+| [WAAPI](waapi/) | `/waapi` | Web Animations API adapter patterns for HyperFrames. |
+| [CSS Animations](css-animations/) | `/css-animations` | Seek-deterministic CSS keyframes for HyperFrames. |
+| [Lottie](lottie/) | `/lottie` | Lottie and dotLottie inside HyperFrames. |
+| [Three.js](three/) | `/three` | Three.js / WebGL canvas layers driven by `hf-seek`. |
+| [TypeGPU](typegpu/) | `/typegpu` | TypeGPU and raw WebGPU shader effects for HyperFrames. |
+| [Tailwind](tailwind/) | `/tailwind` | Tailwind v4 browser-runtime patterns for HyperFrames. |
+
 ## Install
 
 Copy a skill to your global Claude Code skills directory:
