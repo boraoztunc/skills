@@ -25,6 +25,7 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [Web Design Guidelines](web-design-guidelines/) | `/web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. |
 | [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
+| [Impeccable](impeccable/) | `/impeccable` | 23-command design suite — craft, shape, critique, audit, polish, animate, colorize, and more. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
 
 ### SEO & Marketing
 
