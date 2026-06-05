@@ -61,6 +61,15 @@ Skills for [HyperFrames](https://github.com/heygen-com/hyperframes) by HeyGen �
 | [TypeGPU](typegpu/) | `/typegpu` | TypeGPU and raw WebGPU shader effects for HyperFrames. |
 | [Tailwind](tailwind/) | `/tailwind` | Tailwind v4 browser-runtime patterns for HyperFrames. |
 
+### Performance & Architecture
+
+Vendored from [brotzky/performance-skills](https://github.com/brotzky/performance-skills) via [performance.dev/skills](https://performance.dev/skills).
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Conductor Rewrite Performance](conductor-rewrite-performance/) | `/conductor-rewrite-performance` | Optimize local-first React desktop apps — taming re-render cascades, slow streaming lists, and profiling Tauri without DevTools. |
+| [Linear Local-First Architecture](linear-local-first-architecture/) | `/linear-local-first-architecture` | Make web apps feel instant — local-first sync, optimistic updates, eliminating spinners and perceived latency. |
+
 ## Install
 
 Copy a skill to your global Claude Code skills directory:
