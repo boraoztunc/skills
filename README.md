@@ -70,6 +70,12 @@ Vendored from [brotzky/performance-skills](https://github.com/brotzky/performanc
 | [Conductor Rewrite Performance](conductor-rewrite-performance/) | `/conductor-rewrite-performance` | Optimize local-first React desktop apps — taming re-render cascades, slow streaming lists, and profiling Tauri without DevTools. |
 | [Linear Local-First Architecture](linear-local-first-architecture/) | `/linear-local-first-architecture` | Make web apps feel instant — local-first sync, optimistic updates, eliminating spinners and perceived latency. |
 
+### Code Review & Engineering
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Adversarial Review](adversarial-review/) | `/adversarial-review` | Review a diff like a skeptic — assume it's broken, try to break it, and only report findings that survive an independent refutation pass. Scales from one inline pass to a multi-agent fan-out (one skeptic per domain → adversarial verify → synthesis). |
+
 ## Install
 
 Copy a skill to your global Claude Code skills directory:
