@@ -22,6 +22,7 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [Frontend Design](frontend-design/) | `/frontend-design` | Create distinctive, production-grade frontend interfaces. |
 | [Make Interfaces Feel Better](make-interfaces-feel-better/) | `/make-interfaces-feel-better` | Design engineering principles for polished interfaces. |
 | [Emil Design Eng](emil-design-eng/) | `/emil-design-eng` | Emil Kowalski's philosophy on UI polish and component design. |
+| [Apple Design](apple-design/) | `/apple-design` | Apple's fluid, physical motion & interface design, translated for the web. Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills). |
 | [Web Design Guidelines](web-design-guidelines/) | `/web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. |
 | [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
