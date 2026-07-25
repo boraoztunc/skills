@@ -28,6 +28,43 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
 | [Impeccable](impeccable/) | `/impeccable` | 23-command design suite — craft, shape, critique, audit, polish, animate, colorize, and more. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
 
+### Visual Style & Web Design Craft
+
+Audited subset of [MengTo/Skills](https://github.com/MengTo/Skills) `agent-skills/web-design/` (MIT), plus two skills written for this repo. Upstream ships 77 draft skills; 23 survived audit. Corrections and rejection rationale in [`NOTICE-mengto.md`](NOTICE-mengto.md).
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Visual Style Presets](visual-style-presets/) | `/visual-style-presets` | Nine complete style directions (dark glass, dark technical, warm paper, editorial grid, archival book, wireframe…) — surface ladder, accent rule, signature motif. Replaces 19 upstream palette dumps. |
+| [Tailwind v4](tailwind-v4/) | `/tailwind-v4` | Tailwind v4 CSS-first config, `@theme` tokens, v3→v4 migration diffs, dynamic class safety. |
+| [Beautiful Shadows](beautiful-shadows/) | `/beautiful-shadows` | Three exact layered elevation shadows. Copy-paste, no guessing. |
+| [Skeuomorphic UI](skeuomorphic-ui/) | `/skeuomorphic-ui` | Tactile raised/pressed surfaces — gradient borders, stacked inset shadows, embossed text. |
+| [Glass Dark UI](glass-dark-ui/) | `/glass-dark-ui` | Dark glassmorphism with readable contrast and masked gradient borders. |
+| [Container Lines](container-lines/) | `/container-lines` | Vertical container guides + corner squares aligned to the real content container. |
+| [Framed Grid Layout](framed-grid-layout/) | `/framed-grid-layout` | L-bracket corner frames via layered gradients — no extra markup. |
+| [Corner Diagonals](corner-diagonals/) | `/corner-diagonals` | Chamfered corners with correct `clip-path` math and inherited inner clipping. |
+| [CSS Border Gradient](css-border-gradient/) | `/css-border-gradient` | Gradient borders via double-background and masked pseudo-element. |
+| [Progressive Blur](progressive-blur/) | `/progressive-blur` | Layered backdrop-blur gradient ladder with WebKit fallbacks. |
+| [Mesh Gradient Dark Blue](mesh-gradient-dark-blue-clean/) | `/mesh-gradient-dark-blue-clean` | Procedural dark-navy mesh atmosphere with a full system recipe. |
+| [Liquid Metal Border](liquid-metal-border/) | `/liquid-metal-border` | Animated metallic borders via `metal-fx`. |
+| [Beam Glow States](beam-glow-states/) | `/beam-glow-states` | Border-beam loading/active/error states with a11y-safe framing. |
+| [Reveal Hover Effect](reveal-hover-effect/) | `/reveal-hover-effect` | Cursor-masked reveal — correct dual masks, settle-then-stop rAF, cold-load handling. |
+| [Staggered Word Reveal](staggered-word-reveal/) | `/staggered-word-reveal` | Dependency-free word-split reveal with `aria-label` and reduced-motion. |
+| [WebGL Laser](webgl-laser/) | `/webgl-laser` | Raw-WebGL volumetric laser beam — thin core, wide halo, FBM fog. |
+| [Thinking Orbs](thinking-orbs/) | `/thinking-orbs` | Animated AI thinking-state orbs with correct state/preset mapping. |
+| [Shaders Cursor Ripples](shaders-cursor-ripples/) | `/shaders-cursor-ripples` | Cursor ripple shader over imagery. ⚠️ Paid, non-OSS dependency. |
+
+### Page Types & Product IA
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Landing Page](landing-page/) | `/landing-page` | Single-intent landing page IA, layout archetypes, headline formulas, indexing rules. |
+| [Pricing Page](pricing-page/) | `/pricing-page` | Value-metric-first pricing IA, plan ceilings, feature grouping, mobile rules. |
+| [Product Proof SaaS](product-proof-saas/) | `/product-proof-saas` | Honest AI-product demos — real state models, no faked generation speed. |
+| [Operational Enterprise AI](operational-enterprise-ai/) | `/operational-enterprise-ai` | Enterprise-buyer IA — permissions, approval, audit, rollback as a data model. |
+| [Documentary Brutalist Agency](documentary-brutalist-agency/) | `/documentary-brutalist-agency` | Editorial agency site — capped parallax, DOM-order rules, real a11y constraints. |
+| [Editorial Portfolio Chapters](editorial-portfolio-chapters/) | `/editorial-portfolio-chapters` | Chaptered portfolio with exact grid, easing, and stagger values. |
+| [Service Booking Flow](service-booking-flow/) | `/service-booking-flow` | Appointment booking resilience — slot confirmation, stale slots, payment failure, focus return. |
+
 ### SEO & Marketing
 
 | Skill | Command | What it does |
