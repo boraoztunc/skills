@@ -53,6 +53,12 @@ Audited subset of [MengTo/Skills](https://github.com/MengTo/Skills) `agent-skill
 | [Thinking Orbs](thinking-orbs/) | `/thinking-orbs` | Animated AI thinking-state orbs with correct state/preset mapping. |
 | [Shaders Cursor Ripples](shaders-cursor-ripples/) | `/shaders-cursor-ripples` | Cursor ripple shader over imagery. ⚠️ Paid, non-OSS dependency. |
 
+### Image Generation
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Minimal Zine Poster](minimal-zine-poster/) | `/minimal-zine-poster` | Compile a theme into a quiet Japanese/Korean zine poster — aged paper, huge negative space, one high-chroma anchor — and generate the image. Needs `GEMINI_API_KEY`. Adapted from [LiamGvchi/gc-minimal-zine-poster](https://github.com/LiamGvchi/gc-minimal-zine-poster) under MIT (see [`NOTICE-liamgvchi.md`](NOTICE-liamgvchi.md)). |
+
 ### Page Types & Product IA
 
 | Skill | Command | What it does |
