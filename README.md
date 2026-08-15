@@ -20,13 +20,36 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | Skill | Command | What it does |
 |-------|---------|-------------|
 | [Frontend Design](frontend-design/) | `/frontend-design` | Create distinctive, production-grade frontend interfaces. |
-| [Make Interfaces Feel Better](make-interfaces-feel-better/) | `/make-interfaces-feel-better` | Design engineering principles for polished interfaces. |
 | [Emil Design Eng](emil-design-eng/) | `/emil-design-eng` | Emil Kowalski's philosophy on UI polish and component design. |
 | [Apple Design](apple-design/) | `/apple-design` | Apple's fluid, physical motion & interface design, translated for the web. Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills). |
 | [Web Design Guidelines](web-design-guidelines/) | `/web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. |
 | [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
 | [Impeccable](impeccable/) | `/impeccable` | 23-command design suite — craft, shape, critique, audit, polish, animate, colorize, and more. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
+
+### Interface Domain Rules (`better-*`)
+
+Six domain skills with clean, explicitly-declared boundaries, plus two
+orchestrators. Each domain owns its rules and hands off the rest — typography
+defers contrast to colors, accessibility defers remediation to colors, UI
+defers grouping to layout. Vendored from
+[jakubkrehel/skills](https://github.com/jakubkrehel/skills) (see
+[`NOTICE-jakubkrehel.md`](NOTICE-jakubkrehel.md)).
+
+Use these for **rules with exact values**. Use `impeccable`, `apple-design`,
+and `emil-design-eng` for **taste and philosophy** — they answer different
+questions and are meant to coexist.
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Better UI](better-ui/) | `/better-ui` | Concentric radius math, shadow-as-border tokens, image outlines, icon cross-fades, theme-switch smear fix, press-scale values. Supersedes the old `make-interfaces-feel-better`. |
+| [Better Typography](better-typography/) | `/better-typography` | Role-based type scale, properties over raw OpenType tags, measure, `text-wrap`, `text-box-trim`, the two iOS 16px input-zoom fixes. |
+| [Better Colors](better-colors/) | `/better-colors` | APCA `Lc` thresholds with WCAG kept for conformance, ramp correctness, token grammar, `oklab` gradient interpolation. Reports rather than repaints. |
+| [Better Accessibility](better-accessibility/) | `/better-accessibility` | WCAG 2.2 target sizes *with the spacing exception*, `:focus-visible` order, the `0.01ms` reduced-motion switch, live-region decision list. Calibrated against false positives. |
+| [Better Layout](better-layout/) | `/better-layout` | The 2× grouping rule, control clearance, container queries over media queries, logical properties, safe areas, full-bleed grid. |
+| [Better Writing](better-writing/) | `/better-writing` | Tone by stakes, confirmation buttons that repeat the consequence, never concatenating around variables, error rewrites. |
+| [Better Interface](better-interface/) | `/better-interface` | Orchestrator — routes a screen or flow to every domain above, consolidates one ranked verdict with a severity scale and finding cap. |
+| [Interface Review](interface-review/) | `/interface-review` | Change-scoped review (uncommitted, branch, or PR). Reads the `-` side of hunks for regressions, expands blast radius, never mutates the tree. User-invoked only. |
 
 ### Visual Style & Web Design Craft
 
