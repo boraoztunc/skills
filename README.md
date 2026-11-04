@@ -26,6 +26,7 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
 | [Impeccable](impeccable/) | `/impeccable` | 23-command design suite — craft, shape, critique, audit, polish, animate, colorize, and more. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
+| [Stageshow](stageshow/) | `/stageshow` | Faux product UI — stills and cursor-driven demos with a React kit, gold examples, and film/contact-sheet checks. Vendored from [benjitaylor/skills](https://github.com/benjitaylor/skills) @ `ccb6a38` under MIT (see [`stageshow/LICENSE`](stageshow/LICENSE) and [`stageshow/NOTICE.md`](stageshow/NOTICE.md) — bundled app icons and brand marks keep their own terms). |
 
 ### Interface Domain Rules (`better-*`)
 
