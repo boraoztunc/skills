@@ -20,13 +20,40 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | Skill | Command | What it does |
 |-------|---------|-------------|
 | [Frontend Design](frontend-design/) | `/frontend-design` | Create distinctive, production-grade frontend interfaces. |
-| [Emil Design Eng](emil-design-eng/) | `/emil-design-eng` | Emil Kowalski's philosophy on UI polish and component design. |
-| [Apple Design](apple-design/) | `/apple-design` | Apple's fluid, physical motion & interface design, translated for the web. Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills). |
 | [Web Design Guidelines](web-design-guidelines/) | `/web-design-guidelines` | Review UI code for Web Interface Guidelines compliance. |
 | [Vercel React Best Practices](vercel-react-best-practices/) | `/vercel-react-best-practices` | React and Next.js performance optimization from Vercel. |
 | [App Store Screenshots](app-store-screenshots/) | `/app-store-screenshots` | Generate App Store screenshots as advertisements with Next.js. |
-| [Impeccable](impeccable/) | `/impeccable` | 23-command design suite — craft, shape, critique, audit, polish, animate, colorize, and more. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
+| [Impeccable](impeccable/) | `/impeccable` | v4.9.1 design suite — shape, critique, audit, polish, animate, colorize, harden, live, plus native iOS/Android guidance and a DESIGN.md system. Ships a checksum-pinned engine binary (downloaded once to `~/.impeccable/`) and four subagents in `impeccable/agents/` (symlink into `~/.claude/agents/`). Its edit/stop hooks are opt-in: `/impeccable hooks on`. Vendored from [pbakaus/impeccable](https://github.com/pbakaus/impeccable) under Apache-2.0 (see [`impeccable/NOTICE.md`](impeccable/NOTICE.md)). |
 | [Stageshow](stageshow/) | `/stageshow` | Faux product UI — stills and cursor-driven demos with a React kit, gold examples, and film/contact-sheet checks. Vendored from [benjitaylor/skills](https://github.com/benjitaylor/skills) @ `ccb6a38` under MIT (see [`stageshow/LICENSE`](stageshow/LICENSE) and [`stageshow/NOTICE.md`](stageshow/NOTICE.md) — bundled app icons and brand marks keep their own terms). |
+
+### Motion & Design Engineering (Emil Kowalski)
+
+Vendored from [emilkowalski/skills](https://github.com/emilkowalski/skills)
+([aiforui.dev/skills](https://aiforui.dev/skills)), MIT. One coherent suite:
+each skill names its siblings in its description, so they route by job
+(build / review / audit / add / subtract) rather than competing. Four are
+user-invoked only. See [`NOTICE-emilkowalski.md`](NOTICE-emilkowalski.md).
+
+| Skill | Command | What it does |
+|-------|---------|-------------|
+| [Emil Design Eng](emil-design-eng/) | `/emil-design-eng` | The core philosophy: press/hover states, popover origin, tooltip timing, transitions vs keyframes. Fallback when no narrower skill fits. |
+| [Apple Design](apple-design/) | `/apple-design` | Apple's fluid, physical motion and interface design, from WWDC talks, translated for the web. |
+| [Animate](animate/) | `/animate` | Build one web animation, deciding in order: whether, purpose, tool, properties, curve, interruption, exit. |
+| [Animate Expo](animate-expo/) | `/animate-expo` | Same bar for React Native: Reanimated 4 + worklets (`scheduleOnRN`), Gesture Handler, Expo Router, haptics. |
+| [Choreograph](choreograph/) | `/choreograph` | Several elements moving together: stagger, lead/follow, what stays still. |
+| [Gestures](gestures/) | `/gestures` | Drag, swipe, sheets that track the finger 1:1, carry release velocity, stay interruptible. |
+| [Animation Performance](animation-performance/) | `/animation-performance` | Find why motion drops frames; composite-only properties, `will-change` only after measuring. |
+| [Mobile Native](mobile-native/) | `/mobile-native` | Web app on a phone: sticky hover, tap flash, `100vh`, input zoom, safe areas, overscroll. |
+| [Break UI](break-ui/) | `/break-ui` | Worst-case realistic data behind a Demo/Worst-case toggle; reports every break with its fix. |
+| [Find Animation Opportunities](find-animation-opportunities/) | `/find-animation-opportunities` | Read-only: where motion would help, and what must not animate. |
+| [Improve Animations](improve-animations/) | `/improve-animations` | Read-only codebase motion audit → prioritized, self-contained plans for other agents. |
+| [Remove Animations](remove-animations/) | `/remove-animations` | Subtract-only: removes motion that slows the interface. |
+| [Animation Vocabulary](animation-vocabulary/) | `/animation-vocabulary` | "What's it called when…" → the exact motion term. |
+| [Ask Sonner](ask-sonner/) | `/ask-sonner` | Sonner toasts: setup, recipes, and the common "doesn't show / styles lost / behind modal" fixes. |
+| [Review Animations](review-animations/) | `/review-animations` | *User-invoked.* Strict approve/block motion review. |
+| [Prototype](prototype/) | `/prototype` | *User-invoked.* Several genuinely different variants behind a live picker. |
+| [Pick UI Library](pick-ui-library/) | `/pick-ui-library` | *User-invoked.* Curated library picks (checks `package.json` first). |
+| [Learn Taste](learn-taste/) | `/learn-taste` | *User-invoked.* End of session: turns design corrections into rules with their why (DESIGN.md, skill, or lint). |
 
 ### Interface Domain Rules (`better-*`)
 

@@ -23,7 +23,7 @@ Understand what users need to learn and why:
    - What's the key action we want them to take? (First project? First invite?)
    - How do we know onboarding worked? (Completion rate? Time to value?)
 
-**CRITICAL**: Onboarding should get users to value as quickly as possible, not teach everything possible.
+Onboarding should get users to value as quickly as possible, not teach everything possible.
 
 ## Onboarding Principles
 
@@ -167,7 +167,7 @@ Projects help you organize your work and collaborate with your team.
 
 ## Empty State Design
 
-Every empty state needs:
+A first-use empty state carries all five parts below. The other types listed after them need fewer: a user-cleared state stays light, and a no-results state mostly needs a way out.
 
 ### What Will Be Here
 "Your recent projects will appear here"
@@ -195,22 +195,23 @@ Illustration or icon (not just text on blank page)
 
 ### Technical approaches:
 
-**Tooltip libraries**: Tippy.js, Popper.js
-**Tour libraries**: Intro.js, Shepherd.js, React Joyride
+**Tooltip libraries**: Floating UI, Tippy.js
+**Tour libraries**: Driver.js, React Joyride (both MIT)
 **Modal patterns**: Focus trap, backdrop, ESC to close
 **Progress tracking**: LocalStorage for "seen" states
 **Analytics**: Track completion, drop-off points
 
 **Storage patterns**:
 ```javascript
-// Track which onboarding steps user has seen
-localStorage.setItem('onboarding-completed', 'true');
-localStorage.setItem('feature-tooltip-seen-reports', 'true');
+// Namespace keys by account id + onboarding version, so a shared browser
+// doesn't let one account's progress hide onboarding for another.
+localStorage.setItem('onboarding-completed:v1:' + userId, 'true');
+localStorage.setItem('feature-tooltip-seen-reports:v1:' + userId, 'true');
 ```
 
-**IMPORTANT**: Don't show same onboarding twice (annoying). Track completion and respect dismissals.
+Show onboarding once: track completion and respect dismissals.
 
-**NEVER**:
+**Avoid**:
 - Force users through long onboarding before they can use product
 - Patronize users with obvious explanations
 - Show same tooltip repeatedly (respect dismissals)
@@ -231,4 +232,4 @@ Test with real users:
 - **Completion rate**: Are users completing? (If low, simplify)
 - **Time to value**: How long until users get first value?
 
-When users hit the aha moment fast and don't drop off, hand off to `{{command_prefix}}impeccable polish` for the final pass.
+When users hit the aha moment fast and don't drop off, hand off to `/impeccable polish` for the final pass.

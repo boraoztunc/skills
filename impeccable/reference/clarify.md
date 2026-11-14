@@ -1,174 +1,94 @@
-> **Additional context needed**: audience technical level and users' mental state in context.
+> **Additional context needed**: audience knowledge and emotional state.
 
-Find the unclear, confusing, or poorly written interface text and rewrite it. Vague copy creates support tickets and abandonment; specific copy gets users through the task.
+Rewrite unclear interface text so users understand what happened, what matters, and what to do next. Preserve factual meaning, product terminology, and brand voice.
 
+## Audit the language
 
----
+Read the entire interaction path, not isolated strings. Identify:
 
-## Assess Current Copy
+- ambiguous nouns, verbs, and actions;
+- internal jargon or assumed knowledge;
+- vague labels, outcomes, and system states;
+- missing consequences, recovery, or timing;
+- inconsistent terminology and capitalization;
+- redundant headings, intros, helper text, and confirmations;
+- text that breaks at realistic widths or in translation;
+- tone that ignores stress, risk, success, or urgency.
 
-Identify what makes the text unclear or ineffective:
+Infer audience and task from product context and surrounding UI. Ask before changing factual claims, legal meaning, or a term that may be domain-specific.
 
-1. **Find clarity problems**:
-   - **Jargon**: Technical terms users won't understand
-   - **Ambiguity**: Multiple interpretations possible
-   - **Passive voice**: "Your file has been uploaded" vs "We uploaded your file"
-   - **Length**: Too wordy or too terse
-   - **Assumptions**: Assuming user knowledge they don't have
-   - **Missing context**: Users don't know what to do or why
-   - **Tone mismatch**: Too formal, too casual, or inappropriate for situation
+## Set the message hierarchy
 
-2. **Understand the context**:
-   - Who's the audience? (Technical? General? First-time users?)
-   - What's the user's mental state? (Stressed during error? Confident during success?)
-   - What's the action? (What do we want users to do?)
-   - What's the constraint? (Character limits? Space limitations?)
+For each state, decide:
 
-**CRITICAL**: Clear copy helps users succeed. Unclear copy creates frustration, errors, and support tickets.
+1. the one fact the user needs now;
+2. the action available next;
+3. supporting context that changes the decision;
+4. the appropriate tone for this moment.
 
-## Plan Copy Improvements
+Say each idea once. If the heading already explains the state, the introduction should add new information or disappear.
 
-Create a strategy for clearer communication:
+## Rewrite by function
 
-- **Primary message**: What's the ONE thing users need to know?
-- **Action needed**: What should users do next (if anything)?
-- **Tone**: How should this feel? (Helpful? Apologetic? Encouraging?)
-- **Constraints**: Length limits, brand voice, localization considerations
+### Actions and navigation
 
-**IMPORTANT**: Good UX writing is invisible. Users should understand immediately without noticing the words.
+Use a specific verb and object when the outcome is not already obvious. Labels should describe what will happen, not the gesture used to trigger it. Keep the same noun and verb for the same concept throughout the product.
 
-## Improve Copy Systematically
+For destructive actions, name the object and consequence. Prefer undo over confirmation when recovery is safe. When confirmation is necessary, name the action on both the message and button instead of using `Yes`, `No`, `OK`, or `Submit`.
 
-Refine text across these common areas:
+### Forms
 
-### Error Messages
-**Bad**: "Error 403: Forbidden"
-**Good**: "You don't have permission to view this page. Contact your admin for access."
+Use persistent labels; placeholders are examples, not labels. Put format and eligibility requirements before submission. Explain why information is requested only when it is not obvious. Required and optional treatment should be consistent.
 
-**Bad**: "Invalid input"
-**Good**: "Email addresses need an @ symbol. Try: name@example.com"
+Validation says what needs attention and how to correct it without blaming the user. Keep related instructions near the field and announce errors accessibly.
 
-**Principles**:
-- Explain what went wrong in plain language
-- Suggest how to fix it
-- Don't blame the user
-- Include examples when helpful
-- Link to help/support if applicable
+### Errors and permissions
 
-### Form Labels & Instructions
-**Bad**: "DOB (MM/DD/YYYY)"
-**Good**: "Date of birth" (with placeholder showing format)
+An actionable error answers:
 
-**Bad**: "Enter value here"
-**Good**: "Your email address" or "Company name"
+1. what failed;
+2. why, when known and useful;
+3. how to recover or what alternative remains.
 
-**Principles**:
-- Use clear, specific labels (not generic placeholders)
-- Show format expectations with examples
-- Explain why you're asking (when not obvious)
-- Put instructions before the field, not after
-- Keep required field indicators clear
+Do not expose internal codes as the primary message. Do not promise a cause or resolution the system cannot know. Treat privacy, payment, deletion, access loss, and blocked work seriously; warmth is welcome, jokes are not.
 
-### Button & CTA Text
-**Bad**: "Click here" | "Submit" | "OK"
-**Good**: "Create account" | "Save changes" | "Got it, thanks"
+### Loading, empty, and success states
 
-**Principles**:
-- Describe the action specifically
-- Use active voice (verb + noun)
-- Match user's mental model
-- Be specific ("Save" is better than "OK")
+Loading text names the real operation and sets an honest expectation when the wait is meaningful. Show determinate progress when available; never invent progress.
 
-### Help Text & Tooltips
-**Bad**: "This is the username field"
-**Good**: "Choose a username. You can change this later in Settings."
+An empty state distinguishes first use, no results, filters, permissions, and failure. Explain the state and provide the next useful action.
 
-**Principles**:
-- Add value (don't just repeat the label)
-- Answer the implicit question ("What is this?" or "Why do you need this?")
-- Keep it brief but complete
-- Link to detailed docs if needed
+Success confirms the completed outcome and mentions the next consequence only when it changes what the user should do. Routine success should be brief.
 
-### Empty States
-**Bad**: "No items"
-**Good**: "No projects yet. Create your first project to get started."
+### Help and instructional text
 
-**Principles**:
-- Explain why it's empty (if not obvious)
-- Show next action clearly
-- Make it welcoming, not dead-end
+Helper text answers an implicit question instead of restating the control. Use progressive disclosure for uncommon detail. Link text must make sense out of context; icon-only controls need accessible names.
 
-### Success Messages
-**Bad**: "Success"
-**Good**: "Settings saved! Your changes will take effect immediately."
+## Voice, accessibility, and localization
 
-**Principles**:
-- Confirm what happened
-- Explain what happens next (if relevant)
-- Be brief but complete
-- Match the user's emotional moment (celebrate big wins)
+Voice stays consistent; tone adapts to the moment. Use plain language without flattening terminology the audience genuinely knows.
 
-### Loading States
-**Bad**: "Loading..." (for 30+ seconds)
-**Good**: "Analyzing your data... this usually takes 30-60 seconds"
+- Write complete translatable messages rather than concatenated fragments.
+- Keep variables and numbers structured so translators can reorder them.
+- Allow expansion instead of abbreviating prematurely.
+- Make alt text convey the image's information; use empty alt for decoration.
+- Keep screen-reader names aligned with visible labels and outcomes.
+- Do not rely on punctuation, color, or iconography to carry the message alone.
 
-**Principles**:
-- Set expectations (how long?)
-- Explain what's happening (when it's not obvious)
-- Show progress when possible
-- Offer escape hatch if appropriate ("Cancel")
+Maintain a short terminology glossary when inconsistency spans the product. Do not vary words for literary effect in an interface.
 
-### Confirmation Dialogs
-**Bad**: "Are you sure?"
-**Good**: "Delete 'Project Alpha'? This can't be undone."
+## Verify
 
-**Principles**:
-- State the specific action
-- Explain consequences (especially for destructive actions)
-- Use clear button labels ("Delete project" not "Yes")
-- Don't overuse confirmations (only for risky actions)
+Read the flow in context and test:
 
-### Navigation & Wayfinding
-**Bad**: Generic labels like "Items" | "Things" | "Stuff"
-**Good**: Specific labels like "Your projects" | "Team members" | "Settings"
+- comprehension without hidden product knowledge;
+- actionability at errors, empty states, and decision points;
+- factual accuracy and consistent terminology;
+- scanability at target widths and 200% zoom;
+- long names, localization expansion, pluralization, and dynamic values;
+- accessible names and announced state changes;
+- tone appropriate to consequence and emotional context.
 
-**Principles**:
-- Be specific and descriptive
-- Use language users understand (not internal jargon)
-- Make hierarchy clear
-- Consider information scent (breadcrumbs, current location)
+The final copy is as short as it can be without removing meaning or recovery.
 
-## Apply Clarity Principles
-
-Every piece of copy should follow these rules:
-
-1. **Be specific**: "Enter email" not "Enter value"
-2. **Be concise**: Cut unnecessary words (but don't sacrifice clarity)
-3. **Be active**: "Save changes" not "Changes will be saved"
-4. **Be human**: "Oops, something went wrong" not "System error encountered"
-5. **Tell users what to do**, not just what happened
-6. **Be consistent**: Use same terms throughout (don't vary for variety)
-
-**NEVER**:
-- Use jargon without explanation
-- Blame users ("You made an error" → "This field is required")
-- Be vague ("Something went wrong" without explanation)
-- Use passive voice unnecessarily
-- Write overly long explanations (be concise)
-- Use humor for errors (be empathetic instead)
-- Assume technical knowledge
-- Vary terminology (pick one term and stick with it)
-- Repeat information (headers restating intros, redundant explanations)
-- Use placeholders as the only labels (they disappear when users type)
-
-## Verify Improvements
-
-Test that copy improvements work:
-
-- **Comprehension**: Can users understand without context?
-- **Actionability**: Do users know what to do next?
-- **Brevity**: Is it as short as possible while remaining clear?
-- **Consistency**: Does it match terminology elsewhere?
-- **Tone**: Is it appropriate for the situation?
-
-When the copy reads cleanly, hand off to `{{command_prefix}}impeccable polish` for the final pass.
+When the language reads cleanly, hand off to `/impeccable polish` for the final pass.

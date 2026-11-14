@@ -1,124 +1,96 @@
-Typography carries most of the information on the page. Replace generic defaults (Inter, Roboto, system fallback at flat scale) with type that reflects the brand and scales with intentional contrast.
+Typography carries information, hierarchy, and voice. Improve it inside the established visual world; do not replace the identity unless the user asked to.
 
 ---
 
-## Register
+## Visitor mode
 
-Brand: run the font selection procedure in [brand.md](brand.md). Pairing follows the brand's lane (display serif + sans body for editorial/luxury, one committed sans for tech, etc.). Fluid `clamp()` scale, ≥1.25 ratio between steps.
+- **Persuade + Experience:** display type may carry the voice. Use decisive contrast and responsive scale when the composition benefits.
+- **Operate + Read:** stability, scanability, and measure come first. A single well-tuned family and fixed role scale are often right.
+- **Native:** follow [ios.md](ios.md) or [android.md](android.md), including platform scaling and accessibility behavior.
 
-Product: system fonts and familiar sans stacks are legitimate here. One well-tuned family typically carries the whole UI. Fixed `rem` scale, 1.125–1.2 ratio between more closely-spaced steps.
+If typography replacement would create a new identity, route through [new-work.md](new-work.md) and update DESIGN.md. Otherwise preserve confirmed families and improve their use.
 
----
+## Two isolated assessments
 
-## Assess Current Typography
+When a sub-agent tool is available and permitted, run these independently; otherwise run them yourself in this order. Do not let detector findings anchor the design assessment.
 
-Analyze what's weak or generic about the current type:
+1. **Typographic assessment:** inspect representative pages and styles. Answer every question below with a file, selector, or computed value:
+   - **Authority and fit:** Which faces, weights, and roles are established? Do they fit the product and selected world, or are they unexamined defaults? Is every family necessary?
+   - **Hierarchy:** Can heading, body, label, metadata, and data roles be distinguished at a glance? Are adjacent sizes or weights too close to carry different jobs?
+   - **Scale and consistency:** Is there a deliberate role scale, or a collection of arbitrary values? Do repeated roles stay identical across screens and states?
+   - **Reading:** Does body copy stay within a comfortable 45–75 character measure? Are line height, paragraph rhythm, contrast, and tracking tuned to the actual face, width, language, and surface?
+   - **Stress:** What happens with long headings, localization expansion, zoom, narrow containers, missing weights, and font fallback?
+   - **Delivery:** Are only used assets loaded? Do fallback metrics, loading strategy, and variable-font settings avoid invisible text and disruptive reflow?
+2. **Mechanical scan:** run:
 
-1. **Font choices**:
-   - Are we using invisible defaults? (Inter, Roboto, Arial, Open Sans, system defaults)
-   - Does the font match the brand personality? (A playful brand shouldn't use a corporate typeface)
-   - Are there too many font families? (More than 2-3 is almost always a mess)
+```bash
+.claude/skills/impeccable/scripts/impeccable detect --json --scope type [target files or dirs]
+```
 
-2. **Hierarchy**:
-   - Can you tell headings from body from captions at a glance?
-   - Are font sizes too close together? (14px, 15px, 16px = muddy hierarchy)
-   - Are weight contrasts strong enough? (Medium vs Regular is barely visible)
+Also inspect dynamic or arbitrary font values the detector cannot interpret. Synthesize both assessments before editing, noting what each caught alone. A clean scan is a floor, not proof of good typography.
 
-3. **Sizing & scale**:
-   - Is there a consistent type scale, or are sizes arbitrary?
-   - Does body text meet minimum readability? (16px+)
-   - Is the sizing strategy appropriate for the context? (Fixed `rem` scales for app UIs; fluid `clamp()` for marketing/content page headings)
+## Set the system
 
-4. **Readability**:
-   - Are line lengths comfortable? (45-75 characters ideal)
-   - Is line-height appropriate for the font and context?
-   - Is there enough contrast between text and background?
+Before editing, state:
 
-5. **Consistency**:
-   - Are the same elements styled the same way throughout?
-   - Are font weights used consistently? (Not bold in one section, semibold in another for the same role)
-   - Is letter-spacing intentional or default everywhere?
+- the roles the interface needs;
+- the intended contrast between those roles;
+- the reading measure and density;
+- which existing faces and weights are authoritative;
+- any performance, localization, or accessibility constraints.
 
-**CRITICAL**: The goal isn't to make text "fancier." It's to make it clearer, more readable, and more intentional. Good typography is invisible; bad typography is distracting.
+Use the fewest roles and families that make the hierarchy unmistakable. Combine size, weight, space, and tone deliberately instead of asking size alone to do all the work. Role names and tokens should describe purpose rather than values.
 
-## Plan Typography Improvements
+## Apply
 
-Consult the [typography reference](typography.md) for detailed guidance on scales, pairing, and loading strategies.
+- Keep body copy comfortably readable and zoomable. Use 1rem / 16px as the ordinary web body floor unless a dense role, platform convention, or user setting justifies otherwise.
+- Keep prose in the 45–75ch range. Tune line height inversely with measure: wider lines generally need more leading.
+- Compensate light text on dark surfaces on all three perceptual axes: slightly more line height, a touch more tracking, and one step more weight when the face needs it.
+- Tune line height to the face, width, language, and contrast, not a universal ratio.
+- Keep repeated roles consistent across screens and states.
+- Use numeric, tabular, code, and label features when their content benefits.
+- Load only used font assets and weights. Provide metric-compatible fallbacks and avoid blocking text.
+- Let marketing display type respond to available space when useful; keep dense product and reading surfaces spatially predictable.
+- Preserve browser zoom, user font settings, Dynamic Type, and platform text scaling.
+- Use paragraph spacing or first-line indentation as the primary paragraph rhythm; combining both usually double-marks the boundary.
 
-Create a systematic plan:
+Do not make type decorative at the expense of comprehension, or introduce a second family without a clear role it alone can perform.
 
-- **Font selection**: Do fonts need replacing? What fits the brand/context?
-- **Type scale**: Establish a modular scale (e.g., 1.25 ratio) with clear hierarchy
-- **Weight strategy**: Which weights serve which roles? (Regular for body, Semibold for labels, Bold for headings, or whatever fits)
-- **Spacing**: Line-heights, letter-spacing, and margins between typographic elements
+## Line breaks
 
-## Improve Typography Systematically
+After Matthew Butterick's *Practical Typography*, paraphrased; where his numbers differ from these, these stand.
 
-### Font Selection
+- Set `text-wrap: balance` on headings and short centered blocks, and `text-wrap: pretty` on body copy. Both are progressive: a browser that ignores them keeps its default wrap.
+- `pretty` pulls a word down beside a lone last word. It does not fill the last line, and a two-word tail is fine.
+- In a column too narrow for either to help, edit the copy or widen the column.
+- Break a heading by hand only between phrases, and check the break at every width the heading renders at. A hard break that lands mid-line on a phone is worse than the default wrap.
+- An uneven break can carry meaning: a headline that lands on one word for weight, a poster line, a pull quote. Make it deliberate with a hard break or a wrap set on that element, and keep it rare. The detector's `straggler` and `unbalanced-heading` findings are advisory for this reason; say which breaks are intended.
 
-If fonts need replacing:
-- Choose fonts that reflect the brand personality
-- Pair with genuine contrast (serif + sans, geometric + humanist), or use a single family in multiple weights
-- Ensure web font loading doesn't cause layout shift (`font-display: swap`, metric-matched fallbacks)
+## Optical alignment
 
-### Establish Hierarchy
+- Put `text-box: trim-both cap alphabetic` on the label element, not the flex container. On an `inline-flex` button the text is an anonymous flex item, and trim on the button never reaches it. Wrap the label in a `<span>` with `display: block` and trim that.
+- For a trimmed label's fallback face, set `size-adjust` in the fallback `@font-face` to the web font's cap height over the fallback's, both per em. `ascent-override`, `descent-override` and `line-gap-override` change only what trim removes.
+- Judge the rendered component: centered caps are not a centered word. Most of a mixed-case label sits in the x-height, whose center is below the cap center, so a trimmed label can still look low. Check real labels at every size the control ships.
 
-Build a clear type scale:
-- **5 sizes cover most needs**: caption, secondary, body, subheading, heading
-- **Use a consistent ratio** between levels (1.25, 1.333, or 1.5)
-- **Combine dimensions**: Size + weight + color + space for strong hierarchy. Don't rely on size alone
-- **App UIs**: Use a fixed `rem`-based type scale, optionally adjusted at 1-2 breakpoints. Fluid sizing undermines the spatial predictability that dense, container-based layouts need
-- **Marketing / content pages**: Use fluid sizing via `clamp(min, preferred, max)` for headings and display text. Keep body text fixed
+## Verify
 
-### Fix Readability
+- Primary, secondary, body, and metadata roles are recognizable without reading the copy.
+- Long text remains comfortable across relevant widths and languages.
+- The typography belongs to the product and its established world.
+- Loading does not create disruptive reflow or invisible text.
+- Zoom, text scaling, focus, contrast, and reduced viewport paths remain usable.
+- The final mechanical scan has no unexplained findings.
 
-- Set `max-width` on text containers using `ch` units (`max-width: 65ch`)
-- Adjust line-height per context: tighter for headings (1.1-1.2), looser for body (1.5-1.7)
-- Increase line-height slightly for light-on-dark text
-- Ensure body text is at least 16px / 1rem
+Answer each item with rendered or source evidence, then rerun the scan. Do not substitute a bare “yes” for verification.
 
-### Refine Details
-
-- Use `tabular-nums` for data tables and numbers that should align
-- Apply proper `letter-spacing`: slightly open for small caps and uppercase, default or tight for large display text
-- Use semantic token names (`--text-body`, `--text-heading`), not value names (`--font-16`)
-- Set `font-kerning: normal` and consider OpenType features where appropriate
-
-### Weight Consistency
-
-- Define clear roles for each weight and stick to them
-- Don't use more than 3-4 weights (Regular, Medium, Semibold, Bold is plenty)
-- Load only the weights you actually use (each weight adds to page load)
-
-**NEVER**:
-- Use more than 2-3 font families
-- Pick sizes arbitrarily; commit to a scale
-- Set body text below 16px
-- Use decorative/display fonts for body text
-- Disable browser zoom (`user-scalable=no`)
-- Use `px` for font sizes; use `rem` to respect user settings
-- Default to Inter/Roboto/Open Sans when personality matters
-- Pair fonts that are similar but not identical (two geometric sans-serifs)
-
-## Verify Typography Improvements
-
-- **Hierarchy**: Can you identify heading vs body vs caption instantly?
-- **Readability**: Is body text comfortable to read in long passages?
-- **Consistency**: Are same-role elements styled identically throughout?
-- **Personality**: Does the typography reflect the brand?
-- **Performance**: Are web fonts loading efficiently without layout shift?
-- **Accessibility**: Does text meet WCAG contrast ratios? Is it zoomable to 200%?
-
-When the type carries the hierarchy on its own, hand off to `{{command_prefix}}impeccable polish` for the final pass.
+When the hierarchy holds, hand off to `/impeccable polish`.
 
 ## Live-mode signature params
 
-Each variant MUST declare a `scale` param controlling the hierarchy ratio. Express all font sizes in the variant's scoped CSS through `calc(var(--p-scale, 1) * <base>)` or, better, scale the type ramp via `clamp(min, calc(var(--p-scale, 1) * Npx), max)`. Users slide from subdued to commanding.
+Every variant declares a coarse `scale` parameter and authors its type ramp against `var(--p-scale, 1)`.
 
 ```json
 {"id":"scale","kind":"range","min":0.85,"max":1.3,"step":0.05,"default":1,"label":"Scale"}
 ```
 
-Where the variant riffs on a specific pairing, expose the pairing choice as a `steps` param (e.g. "serif display + sans body" vs. "mono display + sans body" vs. "all-sans"). Each branch routes through `:scope[data-p-pairing="X"]` selectors in scoped CSS.
-
-See `reference/live.md` for the full params contract.
+Add at most one pairing or weight parameter when it represents a real system choice. Follow [live.md](live.md)'s parameter contract.

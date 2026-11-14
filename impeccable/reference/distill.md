@@ -21,9 +21,9 @@ Analyze what makes the design feel complex or cluttered:
    - What can be removed, hidden, or combined?
    - What's the 20% that delivers 80% of value?
 
-If any of these are unclear from the codebase, {{ask_instruction}}
+If any of these are unclear from the codebase, do not guess. Ask with the AskUserQuestion tool and wait for the answer before continuing.
 
-**CRITICAL**: Simplicity is not about removing features. It's about removing obstacles between users and their goals. Every element should justify its existence.
+Simplicity is not about removing features. It's about removing obstacles between users and their goals. Every element should justify its existence.
 
 ## Plan Simplification
 
@@ -34,21 +34,21 @@ Create a ruthless editing strategy:
 - **Progressive disclosure**: What can be hidden until needed?
 - **Consolidation opportunities**: What can be combined or integrated?
 
-**IMPORTANT**: Simplification is hard. It requires saying no to good ideas to make room for great execution. Be ruthless.
+Expect to say no to good ideas to make room for great execution.
 
 ## Simplify the Design
 
 Systematically remove complexity across these dimensions:
 
 ### Information Architecture
-- **Reduce scope**: Remove secondary actions, optional features, redundant information
+- **Reduce scope**: Remove secondary actions, redundant information
 - **Progressive disclosure**: Hide complexity behind clear entry points (accordions, modals, step-through flows)
 - **Combine related actions**: Merge similar buttons, consolidate forms, group related content
 - **Clear hierarchy**: ONE primary action, few secondary actions, everything else tertiary or hidden
 - **Remove redundancy**: If it's said elsewhere, don't repeat it here
 
 ### Visual Simplification
-- **Reduce color palette**: Use 1-2 colors plus neutrals, not 5-7 colors
+- **Reduce color palette**: Keep 1-2 decorative or brand colors plus neutrals, not 5-7; keep semantic colors (success, warning, error) and pair each with a non-color cue
 - **Limit typography**: One font family, 3-4 sizes maximum, 2-3 weights
 - **Remove decorations**: Eliminate borders, shadows, backgrounds that don't serve hierarchy or function
 - **Flatten structure**: Reduce nesting, remove unnecessary containers; never nest cards inside cards
@@ -66,15 +66,15 @@ Systematically remove complexity across these dimensions:
 - **Reduce choices**: Fewer buttons, fewer options, clearer path forward (paradox of choice is real)
 - **Smart defaults**: Make common choices automatic, only ask when necessary
 - **Inline actions**: Replace modal flows with inline editing where possible
-- **Remove steps**: Can signup be one step instead of three? Can checkout be simplified?
-- **Clear CTAs**: ONE obvious next step, not five competing actions
+- **Remove steps**: Can the flow lose a step?
+- **Clear next action**: ONE obvious next action, not five competing ones
 
 ### Content Simplification
-- **Shorter copy**: Cut every sentence in half, then do it again
+- **Shorter copy**: Cut filler, not meaning
 - **Active voice**: "Save changes" not "Changes will be saved"
 - **Remove jargon**: Plain language always wins
 - **Scannable structure**: Short paragraphs, bullet points, clear headings
-- **Essential information only**: Remove marketing fluff, legalese, hedging
+- **Essential information only**: Remove marketing fluff, hedging
 - **Remove redundant copy**: No headers restating intros, no repeated explanations, say it once
 
 ### Code Simplification
@@ -83,7 +83,7 @@ Systematically remove complexity across these dimensions:
 - **Consolidate styles**: Merge similar styles, use utilities consistently
 - **Reduce variants**: Does that component need 12 variations, or can 3 cover 90% of cases?
 
-**NEVER**:
+**Avoid**:
 - Remove necessary functionality (simplicity ≠ feature-less)
 - Sacrifice accessibility for simplicity (clear labels and ARIA still required)
 - Make things so simple they're unclear (mystery ≠ minimalism)
@@ -108,4 +108,4 @@ If you removed features or options:
 - Consider if they need alternative access points
 - Note any user feedback to monitor
 
-When the cuts feel right, hand off to `{{command_prefix}}impeccable polish` for the final pass. As Antoine de Saint-Exupéry put it: "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away."
+When the cuts feel right, hand off to `/impeccable polish` for the final pass. As Antoine de Saint-Exupéry put it: "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away."
