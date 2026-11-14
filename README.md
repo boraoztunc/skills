@@ -14,6 +14,7 @@ Each skill is a self-contained markdown file that gives Claude deep domain knowl
 | [Copywriting](copywriting/) | `/copywriting` | Write marketing copy that is clear, compelling, and drives action. |
 | [Copy Editing](copy-editing/) | `/copy-editing` | Systematically improve existing copy through focused editing passes. |
 | [Stop Slop](stop-slop/) | `/stop-slop` | Remove AI writing patterns from prose. |
+| [CrakSEO/skills](https://github.com/CrakSEO/skills) | Connect Claude/Cursor/Codex to CrakSEO remote MCP servers for keyword research, SERP, backlinks, rank tracking, site audit, local SEO, AI visibility, Search Console and URL indexing | Claude Code, Cursor, Codex | MIT |
 
 ### Design & Frontend
 
